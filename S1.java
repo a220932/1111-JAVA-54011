@@ -2,14 +2,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 /*
- *ÀÉ®×¤¤¨C¤@¦æ¥Nªí¤@­Ó¾Ç¥Íªº¦U¬ì¦¨ÁZ¡A¦U¬ì¦¨ÁZ¼Æ¦r¶¡¥H¤@­Ó©Î¦h­ÓªÅ¥Õ©Ò¤À¹j¡C
-½Ğ¼g¤@Javaµ{¦¡¡AÅª¨úC:\file_practice.txtÀÉ®×¤º®e¡A­pºâ¨C­Ó¾Ç¥Íªº¥­§¡¤À¼Æ¡A¨Ã±N¨C­Ó¾Ç¥Íªº¥­§¡¤À¼Æ¨Ì§Ç³v¦æ¼g¤JC:\out.txt¡C 
+ *æª”æ¡ˆä¸­æ¯ä¸€è¡Œä»£è¡¨ä¸€å€‹å­¸ç”Ÿçš„å„ç§‘æˆç¸¾ï¼Œå„ç§‘æˆç¸¾æ•¸å­—é–“ä»¥ä¸€å€‹æˆ–å¤šå€‹ç©ºç™½æ‰€åˆ†éš”ã€‚
+è«‹å¯«ä¸€Javaç¨‹å¼ï¼Œè®€å–C:\file_practice.txtæª”æ¡ˆå…§å®¹ï¼Œè¨ˆç®—æ¯å€‹å­¸ç”Ÿçš„å¹³å‡åˆ†æ•¸ï¼Œä¸¦å°‡æ¯å€‹å­¸ç”Ÿçš„å¹³å‡åˆ†æ•¸ä¾åºé€è¡Œå¯«å…¥C:\out.txtã€‚ 
  */
 public class S1 {
 
 	public static void main(String[] args) throws IOException {
 		FileReader fr = new FileReader("C:\\file_practice.txt");
 		FileWriter fw = new FileWriter("C:\\out.txt");
+		//FileWriter fw = new FileWriter("C:\\Users\\nemi\\Desktop\\out.txt");
+		
 		char data[] = new char[128];
 		int num = fr.read(data);
 		String str = new String(data, 0, num);
@@ -17,7 +19,7 @@ public class S1 {
 		
 		
 		
-		String s[]=str.split("\n");//±N¦r¦ê¤Á³Î¦¨°}¦C
+		String s[]=str.split("\n");//å°‡å­—ä¸²åˆ‡å‰²æˆé™£åˆ—
 		for (int i = 0; i < s.length; i++){
 			float avg = 0;
 			String sc[] = s[i].split(" ");
